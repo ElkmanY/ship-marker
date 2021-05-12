@@ -22,4 +22,4 @@ Run a test by executing
 ```matlab 
 test.m
 ```
-[marked](/marked.png?200x200)
+![marked](/marked.png?200x200)
