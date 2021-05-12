@@ -4,16 +4,22 @@ Draw ship-shaped markers on a curve with Matlab function Plot.
 ## usage
 
 ```matlab
-shipMarker(X,Y,S,N);  % Draw ship-shaped markers on a curve 
+shipmk( x, y, scale, n, heading, color );  % Draw ship-shaped markers on a curve 
 
 ``` 
 
-- ```(X, Y)``` - points of the curve
+### inputs:
 
-- ```S``` - ship figure scale in range (0,1]
+-   `(x, y)` - coordinate, point set of the curve.
+-   `scale` - ship figure scale in range (0,1].
+-   `n` - ship figure number (integer).
+-   `heading` - heading vector of ship figures [rad], following the curve if empty.   
+-   `color` - ship color ( 'r', 'g', 'b', etc. OR [0.4 0.4 0.5] ...).
 
-- ```N``` - ship figure number (integer)
+## example
 
-author: elkmany
-
-date: Jan-22-2021
+Run a test by executing
+```matlab 
+test.m
+```
+[marked](/marked.png)
