@@ -2,9 +2,9 @@ function fh = shipmk(x,y,varargin)
 %% shipmk
 % Draw ship-shape markers on a trajectory
 % Inputs:
-%   (x, y) - point set of the curve
-%   psi - heading vector of ship figures [rad] with length of N, 
-%       default if []: headings are along the curve.
+%   (x, y) - point set of the curve 
+%   psi - heading of ship markers (rad) with the same length of x and y, 
+%       default if empty: headings are along the curve.
 %   ms - ship marker scale in range (0,1]
 %   mn - ship marker number (integer)
 %   mc - ship marker color ( 'r', 'g', 'b', etc. OR [0.4 0.4 0.5] ...)
