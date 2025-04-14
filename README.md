@@ -22,4 +22,4 @@ Run a test by executing
 ```matlab 
 test.m
 ```
-![example_plot](/example_plot.png?200x200)
+![example_plot](/example_plot.png)
