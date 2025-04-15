@@ -2,15 +2,18 @@ function fh = shipmk(x,y,varargin)
 %% shipmk
 % Draw ship-shape markers on a trajectory
 % Inputs:
-%   (x, y) - point set of the curve 
+%   (x, y) - point set of the trajectory.
 %   psi - heading of ship markers (rad) with the same length of x and y, 
-%       default if empty: headings are along the curve.
-%   ms - ship marker scale in range (0,1]
-%   mn - ship marker number (integer)
-%   mc - ship marker color ( 'r', 'g', 'b', etc. OR [0.4 0.4 0.5] ...)
+%           default if empty: headings are along the trajectory.
+%   ms - ship marker scale in range (positive scalar), 
+%           default scale is 1.
+%   mn - ship marker number (positive integer), 
+%           default number is 5.
+%   mc - ship marker color ( 'r', 'g', 'b' OR [0.4 0.4 0.5], etc), 
+%           default color is 'y'.
 % Created on: 2021-05-12
 % Modified on: 2025-04-14 
-% Author: github.com/ElkmanY
+% Author: github.com/elkmany
 %% assign parameters
 sv = length(varargin);
 psi = []; mn = []; ms = []; mc = [];
@@ -27,7 +30,7 @@ if isempty(mn)
     mn = 5;
 end
 if isempty(ms)
-    ms = 0.2;
+    ms = 1;
 end
 if isempty(mc)
     mc = 'y';
@@ -54,6 +57,5 @@ for k = round(linspace(1,length(x)-1,mn))
     fh = fill(S(1,:),S(2,:),mc,'FaceAlpha',0.7,'EdgeColor','k','LineWidth',0.5);
     plot(x(k),y(k),'k.');
 end
-hold off
 end
 
